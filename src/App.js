@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { sredData } from './sredData';
 
 function App() {
+const initialsred = {
+  value: sredData,
+}
+
+const [sred,setsred] = useState(initialsred)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='boardtitle'>
+        <h1>新着スレッド</h1>
+        <hr/>
+      </div>
+
+      <div className='sreddisplay'>
+        {sred.value.map((sred)=>(
+        <div key = {sred.id} className='sred'>
+          <div className='sredName'>
+            <h1>{sred.name}</h1>
+          </div>
+        </div>))}
+        
+      </div>
     </div>
   );
 }
