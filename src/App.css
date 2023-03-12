@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +39,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.sreddisplay .sred{
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 30px;
+  border-radius: 10px;
+  min-width: 500px;
+  background-color: white;
 }
